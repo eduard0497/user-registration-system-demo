@@ -1,0 +1,79 @@
+.homepage_container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.homepage_navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 200px;
+  padding-right: 100px;
+  gap: 30px;
+}
+
+.homepage_navbar > button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.homepage_navbar_change_password {
+  display: flex;
+  gap: 10px;
+}
+
+.homepage_navbar_change_password > input {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: none;
+}
+
+.homepage_navbar_change_password > button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.homepage_user_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 20px 5px 20px 5px;
+}
+
+.homepage_user_info > table {
+  width: 90%;
+}
+
+.homepage_user_info > h1 {
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 450px) {
+  .homepage_navbar {
+    padding-right: 20px;
+    gap: 10px;
+  }
+  .homepage_navbar_change_password {
+    padding-left: 15px;
+    flex-direction: column;
+  }
+  .homepage_user_info {
+    gap: 10px;
+    display: block;
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+    overflow-x: scroll;
+  }
+  .homepage_user_info_table_row > td {
+    padding: 0 15px;
+  }
+}

@@ -1,0 +1,60 @@
+.registration_container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.registration_container_form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 30px 10px 30px 10px;
+  gap: 10px;
+}
+
+.registration_container_form > input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: none;
+}
+
+.registration_container_form > input:focus {
+  outline: none;
+  background-color: none;
+}
+.registration_container_form > input:active {
+  outline: none;
+  background-color: none;
+}
+
+.registration_container_form_gender_toggle {
+  display: flex;
+  gap: 15px;
+}
+
+.registration_container_form_buttons {
+  display: flex;
+  gap: 30px;
+}
+
+.registration_container_form_buttons > button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 450px) {
+  .registration_container {
+    width: 90%;
+  }
+  .registration_container_form {
+    width: 80%;
+  }
+  .registration_container_form > input {
+    width: 100%;
+  }
+}

@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import LoginAndRegLayout from "../src/LoginAndRegLayout/LoginAndRegLayout";
+import HomepageLayout from "../src/HomepageLayout/HomepageLayout";
 
 function App() {
+  const [userLoggedIn, setUserLoggedIn] = useState(false);
+
+  useEffect(() => {
+    if (
+      sessionStorage.getItem("user_id") &&
+      sessionStorage.getItem("access_token")
+    ) {
+      setUserLoggedIn(true);
+    } else {
+      setUserLoggedIn(false);
+    }
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {userLoggedIn ? <HomepageLayout /> : <LoginAndRegLayout />}
     </div>
   );
 }
